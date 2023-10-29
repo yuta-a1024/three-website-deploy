@@ -89,14 +89,31 @@ animationScripts.push({
 
 animationScripts.push({
   start: 80,
-  end: 100,
+  end: 90,
   function() {
     camera.lookAt(box.position);
     box.rotation.x += 0.02;
     box.rotation.y += 0.02;
     torus.rotation.y += 0.04;
     torus.rotation.z += 0.04;
+  },
+});
 
+let rot = 0;
+animationScripts.push({
+  start: 90,
+  end: 100,
+  function() {
+    box.rotation.x += 0.02;
+    box.rotation.y += 0.02;
+    torus.rotation.y += 0.04;
+    torus.rotation.z += 0.04;
+    rot += 0.5;
+    let radian = rot * (Math.PI / 180);
+    camera.position.x = lerp(-15, Math.sin(radian) * 30, scalePercent(80, 100));
+    camera.position.y = lerp(15, Math.cos(radian) * 30, scalePercent(80, 100));
+    camera.position.z = lerp(15, 20, scalePercent(90, 100));
+    camera.lookAt(box.position);
   },
 });
 
