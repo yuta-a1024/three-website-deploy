@@ -30,14 +30,14 @@ main {
 
 section {
   min-height: 100vh;
-  padding: 20px;
+  padding: 30px;
   font-size: 3.5rem;
 }
 
 section div {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 72px;
   text-decoration: none;
 }
 
@@ -45,8 +45,10 @@ section div li {
   list-style: none;
 }
 
+
 section div li a {
   text-decoration: none;
+  color: greenyellow;
 }
 
 main button {
@@ -65,3 +67,4 @@ main button:hover {
   color: #494646;
   border: 1px solid #494646;
 }
+
